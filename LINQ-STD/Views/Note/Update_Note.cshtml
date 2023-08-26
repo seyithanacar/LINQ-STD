@@ -1,0 +1,25 @@
+﻿@model LINQ_STD.Models.Note
+@{
+    ViewBag.Title = "Update_Note";
+    Layout = "~/Views/View.cshtml";
+}
+
+@using (Html.BeginForm("Update_Note", "Note", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.HiddenFor(x => x.Note_Id);
+
+    <div>
+        NOTE 1
+        @Html.TextBoxFor(x => x.Note_1, new { @class = "form-control" })
+        <br />
+        NOTE 2
+        @Html.TextBoxFor(x => x.Note_2, new { @class = "form-control" })
+        STUDENT
+        @Html.TextBoxFor(x => x.Student_Number, new { @class = "form-control" })
+        LESSON
+        @Html.TextBoxFor(x => x.Lesson_Id, new { @class = "form-control" })
+        <button class="btn btn-success" type="submit"> CREATE</button>
+    </div>
+
+}
+

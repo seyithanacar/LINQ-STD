@@ -1,0 +1,29 @@
+﻿
+@model List<LINQ_STD.Models.Student>
+@{
+    ViewBag.Title = "Student_Index";
+    Layout = "~/Views/View.cshtml";
+}
+
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th scope="col">NUMBER</th>
+        <th scope="col">NAME</th>
+        <th scope="col">SURNAME</th>
+        <th scope="col">DELETE</th>
+        <th scope="col">UPDATE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <th>@x.Student_Number</th>
+            <th>@x.Student_Name</th>
+            <th>@x.Student_Surname</th>
+            <th> <a href="Delete_Student/@x.Student_Number" class="btn btn-danger">DELETE</a></th>
+            <th> <a href="Update_Student/@x.Student_Number" class="btn btn-success">UPDATE</a></th>
+            
+        </tr>
+    }
+</table>

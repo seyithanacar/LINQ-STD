@@ -1,0 +1,12 @@
+﻿@model LINQ_STD.Models.Lesson
+@{
+    ViewBag.Title = "Add_Lesson";
+    Layout = "~/Views/View.cshtml";
+}
+
+<form class="form-group" method="post" enctype="multipart/form-data">  
+    LESSON NAME
+    @Html.TextBoxFor(x=> x.Lesson_Name, new {@class="form-control"});
+    <button type="submit" class="btn btn-success">CREATE</button>
+</form>
+

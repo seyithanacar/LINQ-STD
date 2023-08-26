@@ -1,0 +1,18 @@
+﻿@model LINQ_STD.Models.Lesson
+@{
+    ViewBag.Title = "Update_Lesson";
+    Layout = "~/Views/View.cshtml";
+}
+
+@using (Html.BeginForm("Update_Lesson", "Lesson", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div>
+        @Html.HiddenFor(model => model.Lesson_Id)
+        <br />
+        LESSON NAME
+        @Html.TextBoxFor(x => x.Lesson_Name, new { @class = "form-control" });
+        <br />
+        <button type="submit" class="btn btn-success">UPDATE</button>
+    </div>
+}
+

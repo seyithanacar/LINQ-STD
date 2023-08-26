@@ -1,0 +1,18 @@
+﻿@model LINQ_STD.Models.Student
+@{
+    ViewBag.Title = "Add_Student";
+    Layout = "~/Views/View.cshtml";
+}
+
+<form class="form-group" method="post" enctype="multipart/form-data">
+    <br />
+    STUDENT NAME
+    @Html.TextBoxFor(s => s.Student_Name,new { @class = "form-control" })
+    <br />
+    STUDENT SURNAME
+    @Html.TextBoxFor(s => s.Student_Surname,new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-success">CREAT</button> 
+</form>
+
+

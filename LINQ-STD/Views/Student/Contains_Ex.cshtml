@@ -1,0 +1,36 @@
+﻿@model List<LINQ_STD.Models.Student>
+@{
+    ViewBag.Title = "Contains_Ex";
+    Layout = "~/Views/View.cshtml";
+}
+
+<h2>Contains_Exempla</h2>
+<form action="/Student/Contains_Ex" method="POST">
+    <div>
+        <input name="aranan" type="text" value="@Request["aranan"]" class="text-success form-control">
+    </div>
+    <button type="submit">SEARCH</button>
+</form>
+@if (Model != null)
+{
+
+    <table class="table table-striped">
+        <tr>
+            <th class="col">NUMBER</th>
+            <th>NAME-SURNAME</th>
+
+        </tr>
+
+        @foreach (var x in Model)
+        {
+            <tr>
+                <th class="col">@x.Student_Number</th>
+                <th class="col">@x.Student_Name @x.Student_Surname</th>
+
+            </tr>
+
+        }
+
+    </table>
+}
+

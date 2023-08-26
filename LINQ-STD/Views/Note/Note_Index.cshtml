@@ -1,0 +1,38 @@
+﻿@model List<LINQ_STD.Models.Note>
+@{
+    ViewBag.Title = "Note_Index";
+    Layout = "~/Views/View.cshtml";
+}
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>ID</th>
+        <th>ABAOT STUDENT</th>
+        <th>ABAOT LESSON</th>
+        <th>NOTE 1</th>
+        <th>NOTE 2</th>
+        <th>AVARAGE</th>
+        <th>STATU</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.Note_Id</th>
+            <th>@x.Student.Student_Name @x.Student.Student_Surname</th>
+            <th>@x.Lesson.Lesson_Name</th>
+            <th>@x.Note_1</th>
+            <th>@x.Note_2</th>
+            <th>@x.Note_Average</th>
+            <th>@x.Statu</th>
+            <th><a href="/Note/Delete_Note/@x.Note_Id" class="btn btn-danger">DELETE</a></th>
+            <th><a href="/Note/Update_Note/@x.Note_Id" class="btn btn-success">UPDATE</a></th>
+
+            
+
+        </tr>
+    }
+</table>
+

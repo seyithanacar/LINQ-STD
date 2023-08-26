@@ -1,0 +1,18 @@
+﻿@model LINQ_STD.Models.Student
+@{
+    ViewBag.Title = "Update_Student";
+    Layout = "~/Views/View.cshtml";
+}
+
+<form class="form-group" method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(model => model.Student_Number)
+    <br />
+    STUDENT NAME
+    @Html.TextBoxFor(x => x.Student_Name, new { @class = "form-control" });
+    <br />
+    STUDENT SURNAME
+    @Html.TextBoxFor(x => x.Student_Surname, new { @class = "form-control" });
+    <br />
+    <button type="submit" class="btn btn-success">CREAT</button>
+</form>
+

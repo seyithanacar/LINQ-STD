@@ -1,0 +1,30 @@
+﻿@model List<LINQ_STD.Models.Lesson>
+@{
+    ViewBag.Title = "Lesson_Index";
+    Layout = "~/Views/View.cshtml";
+}
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th class="col">LESSON ID</th>
+        <th class="col">LESSON NAME</th>
+        <th class="col">DELETE</th>
+        <th class="col">UPDATE</th>
+
+
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr >
+            <th class="col">@x.Lesson_Id</th>
+            <th class="col">@x.Lesson_Name</th>
+            <th class="col"><a class="btn btn-danger" href="/Lesson/Delete_Lesson/@x.Lesson_Id">DELETE</a></th>
+            <th class="col"><a class="btn btn-success" href="/Lesson/Update_Lesson/@x.Lesson_Id">UPDATE</a></th>
+
+
+
+        </tr>
+    }
+</table>
+
